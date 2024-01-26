@@ -8,6 +8,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+    environment:
+      name: test
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -39,7 +42,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           source: "build/*"
           target: "~/build"
-          strip_components: 1 # Optional: remove the specified number of leading path elements.
 
       - name: Execute deployment script
         uses: appleboy/ssh-action@master
