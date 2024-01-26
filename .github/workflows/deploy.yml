@@ -22,14 +22,7 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-
-      - name: Use SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -t ${{ secrets.HOST }} >> ~/.ssh/known_hosts
-
+        
       - name: Build
         run: npm run build
 
