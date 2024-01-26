@@ -22,7 +22,7 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-        
+
       - name: Build
         run: npm run build
 
@@ -46,4 +46,4 @@ jobs:
           script: |
             cd ~/build/
             # Here you can execute any commands necessary to restart your server or do any additional setup
-            && serve -s build
+            serve -s build
