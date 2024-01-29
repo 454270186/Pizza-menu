@@ -6,7 +6,7 @@ const Header = () => {
 
     return (
         <header className="header">
-            <h1 style={style}>React Pizza</h1>
+            <h1 style={style}>React Pizza sbsbsbsbsbsb</h1>
         </header>
     )
 }
