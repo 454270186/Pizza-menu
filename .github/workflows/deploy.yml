@@ -34,7 +34,7 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSH_KEY }}
           source: "build/*"
-          target: "~/build"
+          target: "~/repo/pizza/"
 
       - name: Execute deployment script
         uses: appleboy/ssh-action@master
@@ -44,6 +44,5 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd ~/build/
             # Here you can execute any commands necessary to restart your server or do any additional setup
-            serve -s build
+            sudo supervisorctl start pizza
