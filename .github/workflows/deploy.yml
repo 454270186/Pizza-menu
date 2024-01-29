@@ -47,4 +47,4 @@ jobs:
             # Here you can execute any commands necessary to restart your server or do any additional setup
             sudo supervisorctl reread
             sudo supervisorctl update
-            sudo supervisorctl start pizza
+            sudo supervisorctl restart pizza
